@@ -10,8 +10,8 @@ module.exports = {
   loaders: utils.cssLoaders({
     sourceMap: sourceMapEnabled,
     extract: isProduction,
-    scss: 'vue-style-loader!css-loader!sass-loader', // <style lang="scss">
-    sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax' // <style lang="sass">
+    scss: 'vue-style-loader!css-loader?importLoaders=2!postcss-loader!sass-loader', // <style lang="scss">
+    sass: 'vue-style-loader!css-loader?importLoaders=2!postcss-loader!sass-loader?indentedSyntax' // <style lang="sass">
   }),
   cssSourceMap: sourceMapEnabled,
   cacheBusting: config.dev.cacheBusting,

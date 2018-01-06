@@ -1,5 +1,5 @@
 <template>
-	<div class="welcome" :class="{hide:hide}">
+	<div class="welcome"  v-if="hide">
 		<img src="https://sinacloud.net/vue-wechat/images/welcome.jpg" >
 	</div>
 </template>
@@ -7,13 +7,13 @@
 	export default {
 		data(){
 			return{
-				hide:false
+				hide:true
 			}
 		},
 		mounted(){
 			let that = this;
 			setTimeout(function(){
-				//that.hide = true;
+				that.hide = false;
 			},2000)
 		}
 	}
@@ -30,7 +30,5 @@
 		}
 		
 	}
-	.hide{
-			opacity: 0;
-		}
+	
 </style>

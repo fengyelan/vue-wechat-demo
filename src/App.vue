@@ -31,12 +31,30 @@ export default {
 </script>
 
 <style>
+@import "assets/css/lib/iconfont.css";
+@import "assets/css/lib/animate.css";
+@import "assets/css/lib/weui.min.css";
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+ 
+}
+
+.outter{
+  position: absolute;
+  top:0;
+  height:100%;
+  width:100%;
+}
+.app-header{
+
+}
+.app-content{
+
+}
+.app-footer{
+  position: fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  z-index:3;
 }
 </style>

@@ -26,5 +26,29 @@
 	}
 </script>
 <style lang='scss' scoped>
-	
+	.c-wx-nav{
+		width:100%;
+	}
+	nav{
+		width:100%;
+		white-space: nowrap;
+		overflow: hidden;
+		display: flex;
+		height:50px;
+		padding-top: 8px;
+		background: #f9f9f9;
+		dl{
+			user-select:none;
+			flex-grow: 1;
+			text-align: center;
+			dd{
+				font-size: 12px;
+			}
+			&.router-link-active{
+				dd,dt{
+					color:#0bb908;
+				}
+			}
+		}
+	}
 </style>
