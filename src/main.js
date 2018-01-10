@@ -2,15 +2,17 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+import router from './router/index'
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import vuex from 'vuex'
+import Vuex from 'vuex'
 import FastClick from 'fastclick'
 
+import store from './vuex/store'
 
-Vue.use(VueAxios,axios,vuex)
+
+Vue.use(VueAxios,axios,Vuex)
 
 //使用 fastclick 解决移动端 300ms 点击延迟
 FastClick.attach(document.body)
@@ -22,6 +24,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   //template: '<App/>',
   //components: { App }
   render:h=>h(App)

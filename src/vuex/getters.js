@@ -7,7 +7,7 @@
 
 const getters = {
 	//从联系人中提取首字母,将首字母变为大写字母，将所有的首字母进行排序
-	contactsInitialList:state=>{
+	contactsInitialList:(state)=>{
 		let initialList = [],
 			allContacts = state.allContacts;
 
@@ -18,7 +18,7 @@ const getters = {
 
 		initialList = Array.from(s); //Array.from方法可以将 Set 结构转为数组。
 		return initialList.sort();
-	}
+	},
 
 	//将联系人按照首字母进行分类
 	contactsList:(state,getters)=>{
@@ -37,6 +37,24 @@ const getters = {
 
 		return list;
 
+	},
+
+	//新的未读消息的总数量
+	newMsgAllCount:(state)=>{
+		let all = 0;
+		state.msgList.baseMsg.forEach(function(item){
+			all+=item.newMsgCount;
+		});
+		return all;
+	},
+
+	//通讯录联系人的总人数
+	contactsCount:(state,getters)=>{
+		let num = 0;
+		for(var key in getters.contactsList){
+			num+= getters.contactsList[key].length;
+		}
+		return num;
 	}
 }
 

@@ -9,7 +9,7 @@
 				<dt class="iconfont icon-contact"></dt>
 				<dd>通讯录</dd>
 			</router-link>	
-			<router-link to="/expore" tag="dl">
+			<router-link to="/explore" tag="dl">
 				<dt class="iconfont icon-find"></dt>
 				<dd>发现</dd>
 			</router-link>	

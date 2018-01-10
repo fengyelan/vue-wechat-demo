@@ -256,6 +256,6 @@ contact.getUserInfo = function(wxid){
 			return item;
 		}
 	})
-
+}
 
 export default contact

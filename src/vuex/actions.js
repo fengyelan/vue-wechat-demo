@@ -1,14 +1,14 @@
 const actions = {
-	setPageName({commit}){
-		commit('Set_Page_Name')
+	setPageName({commit},name){
+		commit('Set_Page_Name',name)
 	},
 
-	toggleHeaderStatus({commit}){
-		commit('Toggle_Header_Status')
+	toggleHeaderStatus({commit},status){
+		commit('Toggle_Header_Status',status)
 	},
 
-	toggleTipsStatus({commit}){
-		commit('Toggle_Tips_Status')
+	toggleTipsStatus({commit},status){
+		commit('Toggle_Tips_Status',status)
 	},
 
 	addNewMsg({commit}){

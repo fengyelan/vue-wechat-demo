@@ -4,6 +4,27 @@
 
 const path = require('path')
 
+//获取主机地址
+const os = require('os');
+
+function getLocalIps(flagIpv6) {
+    var ifaces = os.networkInterfaces();
+    var ips = [];
+    var func = function(details) {
+        if (!flagIpv6 && details.family === 'IPv6') {
+            return;
+        }
+        if (details.address == '127.0.0.1') {
+            return;
+        }
+        ips.push(details.address);
+    };
+    for (var dev in ifaces) {
+        ifaces[dev].forEach(func);
+    }
+    return ips;
+};
+
 module.exports = {
   dev: {
 
@@ -13,7 +34,7 @@ module.exports = {
     proxyTable: {},
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: getLocalIps()[0], // can be overwritten by process.env.HOST
     port: 8888, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

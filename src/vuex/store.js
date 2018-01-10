@@ -12,7 +12,9 @@ import getters from './getters'
 import mutations from './mutations'
 import actions from './actions'
 
-export default new Vuex.store({
+Vue.use(Vuex)
+
+export default new Vuex.Store({
 	state,
 	getters,
 	mutations,

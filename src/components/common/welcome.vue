@@ -7,7 +7,7 @@
 	export default {
 		data(){
 			return{
-				hide:true
+				hide:false
 			}
 		},
 		mounted(){
