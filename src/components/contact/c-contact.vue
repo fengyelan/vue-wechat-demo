@@ -1,38 +1,16 @@
 <template>
   <div class="c-contact">
     <div class="weui-cells">
-      <router-link :to="{path:'/contact/new-friend'}" class="weui-cell weui-cell_access">
+    
+      <router-link v-for="item in contents" :to="{path:item.path}" class="weui-cell weui-cell_access">
         <div class="weui-cell__hd">
-          <img src="../../assets/images/tongxunlu/contact_top-friend-notify.png" height="72" width="72" class="contact-top-img">
+          <img :src="item.image"  class="contact-top-img">
         </div>
         <div class="weui-cell__bd">
-          <p>新的朋友</p>
+          <p>{{item.title}}</p>
         </div>
       </router-link>
-      <router-link :to="{path:'/contact/group-chat'}" class="weui-cell weui-cell_access">
-        <div class="weui-cell__hd">
-          <img src="../../assets/images/tongxunlu/contact_top-addgroup.png" height="72" width="72" class="contact-top-img">
-        </div>
-        <div class="weui-cell__bd">
-          <p>群聊</p>
-        </div>
-      </router-link>
-      <router-link :to="{path:'/contact/tag'}" class="weui-cell weui-cell_access">
-        <div class="weui-cell__hd">
-          <img src="../../assets/images/tongxunlu/contact_top-tag.png" height="72" width="72" class="contact-top-img">
-        </div>
-        <div class="weui-cell__bd">
-          <p>标签</p>
-        </div>
-      </router-link>
-      <router-link :to="{path:'/contact/offical-account'}" class="weui-cell weui-cell_access">
-        <div class="weui-cell__hd">
-          <img src="../../assets/images/tongxunlu/contact_top-offical.png" height="72" width="72" class="contact-top-img">
-        </div>
-        <div class="weui-cell__bd">
-          <p>公众号</p>
-        </div>
-      </router-link>
+
       <div class="list">
         <div class="list-item" v-for="(item,key) in $store.getters.contactsList">
           <div class="weui-cells__title">{{key}}</div>
@@ -58,7 +36,28 @@
 export default {
   data() {
     return {
-
+      contents:[
+        {
+          path:"/wechat/add-friend",
+          image:require("../../assets/images/tongxunlu/contact_top-friend-notify.png"),
+          title:"新的朋友"
+        },
+        {
+          path:"/contact/group-chat",
+          image:require("../../assets/images/tongxunlu/contact_top-addgroup.png"),
+          title:"群聊"
+        },
+        {
+          path:"/contact/tag",
+          image:require("../../assets/images/tongxunlu/contact_top-tag.png"),
+          title:"标签"
+        },
+        {
+          path:"/contact/offical-account",
+          image:require("../../assets/images/tongxunlu/contact_top-offical.png"),
+          title:"公众号"
+        }
+      ]
     }
   }
 }

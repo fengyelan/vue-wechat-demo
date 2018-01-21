@@ -7,7 +7,7 @@
         </div>
         <div class="weui-cell__bd">
           <p>看一看</p>
-          <p class="wx-hao">微信号：yuanlan136</p>
+          <p class="wx-hao">123456</p>
         </div>
         <div class="weui-cell__ft">
           <img src="../../assets/images/wode/erweima.png" width="20" height="20">

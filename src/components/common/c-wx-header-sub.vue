@@ -4,7 +4,6 @@
       <div class="left-box">
         <div class="arr">
           <span class="iconfont icon-return-arrow" @click="$router.back()"></span>
-          <!-- $router.back() 和 $router.go(-1) -->
           <span>{{title}}</span>
         </div>
       </div>

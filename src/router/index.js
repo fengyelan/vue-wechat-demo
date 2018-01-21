@@ -18,6 +18,8 @@ import groupChat from "../components/contact/c-contact-group.vue";
 import tag from "../components/contact/c-contact-tag.vue";
 import officalAccount from "../components/contact/c-contact-offical-account.vue";
 import detail from "../components/contact/c-detail.vue"
+import addFrined from "../components/common/c-add-friend.vue"
+import search from "../components/common/c-wx-header-search.vue"
 
 
 export default new Router({
@@ -26,6 +28,23 @@ export default new Router({
       path: '/',
       name:"微信",
       component:wechat
+    },
+    {
+      path:"/wechat/add-friend",
+      name:"",
+      components:{
+        "default":wechat,
+        "subPage":addFrined
+      }
+    },
+    {
+      path: '/wechat/add-friend/search',
+      name:"",
+      components:{
+        "default":wechat,
+        "subPage":search
+        
+      }
     },
     {
       path: '/contact',

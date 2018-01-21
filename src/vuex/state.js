@@ -11,6 +11,7 @@ import officialAccounts from './official-account'
 
 
 const state = {
+ 
 	newMsgCount:0,//新消息的数量
 	allContacts:contact.contacts,//所有联系人
 	officialAccounts:officialAccounts,//所有关注的微信号

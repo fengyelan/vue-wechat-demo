@@ -24,13 +24,6 @@
 				<span>音乐</span>
 				<span>表情</span>
 			</div>
-			<!-- <div class="weui-cells weui-cells_access search_show" id="search_show">
-			    <div class="weui-cell">
-			        <div class="weui-cell__bd weui-cell_primary">
-			            <p>实时搜索文本</p>
-			        </div>
-			    </div>
-			</div> -->
 		</article>
 	</div>
 </template>

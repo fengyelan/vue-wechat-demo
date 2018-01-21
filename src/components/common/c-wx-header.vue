@@ -13,10 +13,10 @@
 				<span class="iconfont icon-tips-xiaoxi"></span>
 				<span>发起群聊</span>
 			</li>
-			<li>
+			<router-link :to="{path:'/wechat/add-friend'}" tag="li">
 				<span class="iconfont icon-tips-add-friend"></span>
 				<span>添加朋友</span>
-			</li>
+			</router-link>
 			<li>
 				<span class="iconfont icon-tips-saoyisao"></span>
 				<span>扫一扫</span>

@@ -36,6 +36,8 @@ import wxHeader from './components/common/c-wx-header.vue'
 
 import search from './components/common/c-search.vue'
 
+import store from './vuex/store.js'
+
 
 export default {
   name: 'app',
@@ -57,6 +59,8 @@ export default {
           from_path = from.path,
           to_Depth = to.path&&to.path.split('/').length,
           from_Depth = from.path&&from.path.split('/').length;
+
+      store.state.tipStattus = false;
       
       if(to_Depth===2){
         this.$store.dispatch('setPageName',to.name);
